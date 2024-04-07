@@ -148,70 +148,6 @@ const NavUi = () => {
         </Box> 
 
 
-        {/*<Box sx={{
-          display:'flex',
-          alignItems: 'end',
-          gap: '15px'
-        }} >
-
-          <Link href='/' style={{textDecoration:'none'}}>
-              <Typography variant='h6' sx={{
-                color: '#2B3C2C',
-                '&:hover': {
-                  fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
-                }
-              }} className={`${fraunces.className}`}>
-                About
-              </Typography>
-          </Link>
-
-          <Box sx={{color:'#2B3C2C'}}>/</Box>
-          <Link href='/' style={{textDecoration:'none'}}>
-              <Typography variant='h6' sx={{
-                color: '#2B3C2C',
-                '&:hover': {
-                  fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
-                }
-              }} className={`${fraunces.className}`}>
-                Skill
-              </Typography>
-          </Link>
-
-          <Box sx={{color:'#2B3C2C'}}>/</Box>
-          <Link href='/' style={{textDecoration:'none'}}>
-              <Typography variant='h6' sx={{
-                color: '#2B3C2C',
-                '&:hover': {
-                  fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
-                }
-              }} className={`${fraunces.className}`}>
-                Experience
-              </Typography>
-          </Link>
-        </Box>
-
-        <Box>
-          <Button variant="contained" sx={{
-            backgroundColor: '#2B3C2C',
-            color: 'white',
-            borderRadius: '0px',
-            textTransform: 'none',
-            '&:hover': {
-              backgroundColor: '#2B3C2C',
-            }
-          }}>
-            <Typography variant='h6' sx={{
-              // color: '#2B3C2C'
-            }} className={`${fraunces.className}`}>
-              Contract
-            </Typography>
-          </Button>
-
-        </Box> */}
-
         <Drawer
           anchor="right"
           variant="temporary"
@@ -278,7 +214,7 @@ const NavUi = () => {
                   justifyContent:'space-between',
                 }
               }}>
-                <Typography variant='h5' sx={{
+                <Typography variant='h6' sx={{
                   fontWeight: '600',
                   padding:'15px',
                 }} className={`${fraunces.className}`}>
@@ -302,7 +238,7 @@ const NavUi = () => {
                 }
                 
               }}>
-                <Typography variant='h5' sx={{
+                <Typography variant='h6' sx={{
                   fontWeight: '600',
                   padding:'15px',
                 }} className={`${fraunces.className}`}>
@@ -325,7 +261,7 @@ const NavUi = () => {
                  justifyContent:'space-between',
                }
               }}>
-                <Typography variant='h5' sx={{
+                <Typography variant='h6' sx={{
                   fontWeight: '600',
                   padding:'15px',
                 }} className={`${fraunces.className}`}>
@@ -335,36 +271,21 @@ const NavUi = () => {
               </Box>
             </Link>
 
-
-
-              {/* <Box>
-                <Link href='/' style={{textDecoration:'none' , marginBottom:'50px'}}>
-                  <Typography variant='h5' sx={{
-                    color: '#2B3C2C',
-                    fontWeight: '500',
-                    '&:hover': {
-                      fontWeight: '700',
-                    }
-                  }} className={`${fraunces.className}`}>
-                    Skill
-                  </Typography>
-                </Link>
-                <Divider  />
-              </Box>
-              <Box>
-                <Link href='/' style={{textDecoration:'none' , marginBottom:'50px'}}>
-                  <Typography variant='h5' sx={{
-                    color: '#2B3C2C',
-                    fontWeight: '500',
-                    '&:hover': {
-                      fontWeight: '700',
-                    }
-                  }} className={`${fraunces.className}`}>
-                    Experience
-                  </Typography>
-                </Link>
-                <Divider  />
-              </Box> */}
+            <Button variant="contained" sx={{
+              backgroundColor: '#2B3C2C',
+              color: 'white',
+              borderRadius: '0px',
+              textTransform: 'none',
+              '&:hover': {
+                backgroundColor: '#2B3C2C',
+              }
+            }}>
+              <Typography variant='h6' sx={{
+                // color: '#2B3C2C'
+              }} className={`${fraunces.className}`}>
+                Contract
+              </Typography>
+            </Button>
               
 
             
