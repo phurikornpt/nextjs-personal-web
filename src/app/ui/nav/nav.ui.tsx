@@ -16,15 +16,16 @@ const NavUi = () => {
   }
   return (
     <>
-
+      {/* #EAF4E8 */}
+      {/* #2B3C2C */}
       {/* ------------------- Desktop -------------------*/}
 
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#EAF4E8',
-        color: 'white',
+        backgroundColor: '#2B3C2C',
+        color: '#EAF4E8',
         fontSize: '2rem',
         padding:'20px 30px'
       }}>
@@ -33,7 +34,7 @@ const NavUi = () => {
             textDecoration: 'none',
           }}>
             <Typography variant='h4' sx={{
-              color: '#2B3C2C',
+              color: '#EAF4E8',
               fontWeight: '500',
               '&:hover': {
                 fontWeight: '700',
@@ -50,38 +51,38 @@ const NavUi = () => {
           gap: '15px'
         }} >
 
-          <Link href='/' style={{textDecoration:'none'}}>
+          <Link href='#About' style={{textDecoration:'none'}}>
               <Typography variant='h6' sx={{
-                color: '#2B3C2C',
+                color: '#EAF4E8',
                 '&:hover': {
                   fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
+                  textDecoration: 'underline solid #EAF4E8'
                 }
               }} className={`${fraunces.className}`}>
                 About
               </Typography>
           </Link>
 
-          <Box sx={{color:'#2B3C2C'}}>/</Box>
+          <Box sx={{color:'#EAF4E8'}}>/</Box>
           <Link href='/' style={{textDecoration:'none'}}>
               <Typography variant='h6' sx={{
-                color: '#2B3C2C',
+                color: '#EAF4E8',
                 '&:hover': {
                   fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
+                  textDecoration: 'underline solid #EAF4E8'
                 }
               }} className={`${fraunces.className}`}>
                 Skill
               </Typography>
           </Link>
 
-          <Box sx={{color:'#2B3C2C'}}>/</Box>
+          <Box sx={{color:'#EAF4E8'}}>/</Box>
           <Link href='/' style={{textDecoration:'none'}}>
               <Typography variant='h6' sx={{
-                color: '#2B3C2C',
+                color: '#EAF4E8',
                 '&:hover': {
                   fontWeight: '700',
-                  textDecoration: 'underline solid #2B3C2C'
+                  textDecoration: 'underline solid #EAF4E8'
                 }
               }} className={`${fraunces.className}`}>
                 Experience
@@ -91,16 +92,16 @@ const NavUi = () => {
 
         <Box>
           <Button variant="contained" sx={{
-            backgroundColor: '#2B3C2C',
-            color: 'white',
+            backgroundColor: '#EAF4E8',
+            color: '#2B3C2C',
             borderRadius: '0px',
             textTransform: 'none',
             '&:hover': {
-              backgroundColor: '#2B3C2C',
+              backgroundColor: '#EAF4Ef',
             }
           }}>
-            <Typography variant='h6' sx={{
-              // color: '#2B3C2C'
+            <Typography variant='h5' sx={{
+              fontWeight: '700',
             }} className={`${fraunces.className}`}>
               Contract
             </Typography>
@@ -115,7 +116,7 @@ const NavUi = () => {
         display: {  xs: 'flex', md: 'none'},
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: '#EAF4E8',
+        backgroundColor: '#2B3C2C',
         color: 'white',
         fontSize: '2rem',
         padding:'20px 30px'
@@ -125,7 +126,7 @@ const NavUi = () => {
             textDecoration: 'none',
           }}>
             <Typography variant='h4' sx={{
-              color: '#2B3C2C',
+              color: '#EAF4E8',
               fontWeight: '500',
               '&:hover': {
                 fontWeight: '700',
@@ -138,7 +139,7 @@ const NavUi = () => {
         <Box>
           <IconButton
               sx={{
-                color: '#2B3C2C',
+                color: '#EAF4E8',
               }}
               size="large"
               onClick={handleDrawerToggle}

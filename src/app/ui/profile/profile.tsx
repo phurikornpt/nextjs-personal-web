@@ -129,7 +129,6 @@ const Profile = () => {
         margin: '0px',
         height: '50rem',
         backgroundImage:'url(profile/bg-image.jpg)',
-        // backgroundPosition:'',
         backgroundSize:'cover',
         backgroundRepeat:'repeat',
       }}>
@@ -138,7 +137,7 @@ const Profile = () => {
             margin: '100px 5vw 0px 5vw',
           }}>
             <Box sx={{
-              padding: '50px 50px',
+              padding: '20px 20px',
               background: 'rgb(255,255,255,.85)',
               
             }}>
