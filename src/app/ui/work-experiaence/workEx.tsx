@@ -44,7 +44,7 @@ const WorkExperience = () => {
             WORK EXPERIENCE
         </Typography>
 
-        <div className={Style.itemContainer} ref={sliderRef} onMouseOver={handleScroll()}>
+        <div className={Style.itemContainer} ref={sliderRef} onMouseOver={handleScroll}>
             <IconButton sx={{
               position: 'absolute',
               zIndex: '1',
