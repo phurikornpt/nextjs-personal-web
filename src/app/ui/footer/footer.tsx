@@ -22,7 +22,7 @@ const Footer = () => {
             color: '#fff',
             fontWeight: '300',
           }} className={`${param.className}`}>
-            this website make by phurikorn.t at 2024 => create with nextjs  / ui with mui .
+            this website make by phurikorn.t at 2024 create with nextjs  / ui with mui .
       </Typography>
     </Box>
   )
