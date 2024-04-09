@@ -9,65 +9,56 @@ const About = () => {
     <Box id='About'>
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
-        gap: '20px',
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'white',
+        flexDirection: 'column',
+        // gap: '20px',
+        // alignItems: 'center',
+        // justifyContent: 'center',
+        background: 'rgb(230,231,225,.6)',
         color: 'black',
         fontSize: '2rem',
-        margin: '10px 0px',
-        height: '30rem',
+        padding: '10px 0px',
+        height: '50rem',
       }}>
         <Box sx={{
-          margin: '0px 0px 0px 1vw',
+          margin: '100px 0px 30px 150px',
         }}>
 
-        <Typography variant='h3' sx={{
-          color: '#2B3C2C',
-          fontWeight: '700',
-        }} className={`${fraunces.className}`}>
-          About
-        </Typography>
-        
-        </Box>
+          <Box>
+              <Typography variant='h3' sx={{
+                  color: '#2B3C2C',
+                  fontWeight: '700',
+              }} className={`${fraunces.className}`}>
+                  ABOUT
+              </Typography>
+          </Box>
 
-        <Box sx={{
-          margin: '0px 0px 0px 1vw',
-          // width: '400px',
-          // border: '1px solid black',
-        }}>
+          <Grid container spacing={3}>
+            <Grid item xs={8} sx={{
+            }}>
+              <Box sx={{
+                margin: '60px 0px 0px 0px',
+              }}>
 
-        <Image 
-          src={'/images/a2.png'}
-          width={300}
-          height={350}
-          alt="Picture of the author"
-        />
-        </Box>
-
-        <Box sx={{
-          margin: '0px 0px 0px 1vw',
-          border: '1px solid',
-          borderColor: '#2B3C2C',
-          maxWidth: '500px',
-          padding: '30px 20px',
-        }}>
-
-        <Typography variant='h6' sx={{
-          color: '#2B3C2C',
+              <Typography variant='h6' sx={{
+                color: '#2B3C2C',
+                
+                fontWeight: '300',
+                whiteSpace: 'pre-lin',
+              }} className={`${paramThai.className}`}>
+                ผมนาย ภูริกรณ์ ทองย้อย  กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ (EnET) 
+                คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม
+                มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+                กำลังจะจบการศึกษาในเดือนเมษายนครับ 
+                ผ่านการฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือน
+                ในตอนนี้ผมกำลังมองหางานในตำเเหน่ง Junior Backend Developer
+                พร้อมเริ่มงานวันที่ 1 พฤษภาคม 2567 นี้ครับ
+              </Typography>
+              
+              </Box>
+            </Grid>
+          </Grid>
           
-          fontWeight: '300',
-          whiteSpace: 'pre-lin',
-        }} className={`${paramThai.className}`}>
-          ผมนาย ภูริกรณ์ ทองย้อย  กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ (EnET) 
-          คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม
-          มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-          กำลังจะจบการศึกษาในเดือนเมษายนครับ 
-          ผ่านการฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือน
-          ในตอนนี้ผมกำลังมองหางานในตำเเหน่ง Junior Backend Developer
-          พร้อมเริ่มงานวันที่ 1 พฤษภาคม 2567 นี้ครับ
-        </Typography>
-        
+
         </Box>
 
       </Box>
