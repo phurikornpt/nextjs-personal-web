@@ -1,0 +1,13 @@
+.itemContainer {
+  display: flex;
+  align-items: start;
+  gap: 15px;
+  margin-top: 30px;
+  max-width: 100vw;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  transition: scroll 5s ease-in-out;
+}
+.itemContainer::-webkit-scrollbar {
+  display: none;
+}

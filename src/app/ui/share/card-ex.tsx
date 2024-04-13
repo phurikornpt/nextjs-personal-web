@@ -11,16 +11,24 @@ type CardExProps = {
     description: string,
     image?: string,
     tools: string[],
-  }[]
+  }[],
+  size:{
+    width: number,
+    height: number,
+  },
 }
+
 const CardEx = (props:CardExProps) => {
-  const data = props.cardEx
+  const {
+    cardEx,
+    size
+  } = props
 
   return (
-    data.map((value,index) => {
+    cardEx.map((value,index) => {
       return (
         <>
-          <Box sx={{
+          <Box key={index} sx={{
             margin: '5px 10px 0px 0px',
             padding: '45px 25px 25px 25px',
             bgcolor:'rgb(255,255,255,0.85)',
@@ -45,8 +53,12 @@ const CardEx = (props:CardExProps) => {
                 value.image ?
                 <Image
                   src={value?.image}
-                  width={500}
-                  height={330}
+                  width={size.width}  
+                  height={size.height}
+                  // width={420}
+                  // height={300}
+                  // width={300}
+                  // height={150}
                   alt="Picture of the author"
                   style={{
                     objectFit: 'contain',

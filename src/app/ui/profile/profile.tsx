@@ -122,8 +122,8 @@ const Profile = () => {
                   fontWeight: '500',
                   marginTop: '20px',
                 }} className={`${paramThai.className}`}>
-                  สวัสดีครับ ผมชื่อภูนะครับเป็นนักศึกษาชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
-                  ผมสนใจในตำเเหน่ง Junior Backend Developer ครับ เเละใน Website นี้จะเป็น Profile ของผมครับ
+                  สวัสดีครับผมชื่อภูนะครับเป็นนักศึกษาชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
+                  เเละใน Website นี้จะเป็น Profile ของผมครับ 
               </Typography>
 
               <Box sx={{
