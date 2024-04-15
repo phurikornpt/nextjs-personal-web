@@ -5,10 +5,46 @@ import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
 
 import Style from './style.module.css'
-import CardEx from '../share/card-ex'
+import CardEx, { CardExProps } from '../share/card-ex'
 import { IconButton } from '@mui/material';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
+const universityEx:Pick<CardExProps,'cardEx'> = {
+  cardEx:[
+    {
+      date:"[ มกราคม 2022 ] ",
+      title: "ส่งมอบ Robot ให้กับกระทรวง อว. สู้ภัยโควิค",
+      description: `ทีมโปรแกรมควบคุมหุ่นยนต์ไอพ่นละอองฝอย (ULV) เเละ หุ่นยนต์ฉายแสง UVC ฆ่าเชื้อโรคและไวรัส`,
+      image: "/images/activity/robot.jpg",
+      tools: [],
+    },
+    {
+      date:"[ มกราคม 2022 ] ",
+      title: "คว้ารางวัลรองชนะเลิศอันดับ 2 จากการแข่งขันหุ่นยนต์รายการ CARC",
+      description: `ทีมโปรแกรม`,
+      image: "/images/activity/carc.jpg",
+      tools: [],
+    },
+    {
+      date:"[ มกราคม 2022 ] ",
+      title: "เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์",
+      description: `เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์ สอนเขียนโปรแกรมภาษา C/C++ 
+ควบคุมหุ่นยนต์ ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ `,
+      image: "/images/activity/stem.jpg",
+      tools: [],
+    },
+    {
+      date:"[ 2021 - ปัจุบัน ]",
+      title: "งานพิเศษ",
+      description: `เป็นติวเตอร์สอนเขียนโปรแกรม
+● Python
+● Arduino / Robot`,
+      image: "/images/activity/tutor.png",
+      tools: [],
+    },
+  ]
+}
 
 const UniExperience = () => {
   const sliderRef = useRef<any>(null);
@@ -40,7 +76,7 @@ const UniExperience = () => {
               color: '#2B3C2C',
               fontWeight: '700',
           }} className={`${fraunces.className}`}>
-              UNIVERSITY EXPERIENCE
+              ACTIVITIES
           </Typography>
 
           <div className={Style.itemContainer} ref={sliderRef} onMouseOver={handleOn} onMouseOut={handleOut}>
@@ -80,44 +116,7 @@ const UniExperience = () => {
                   color: 'rgb(0,20,0,0.65)',
                 }}/>
               </IconButton>
-              <CardEx size={{width:420,height:300}} cardEx={[
-                {
-                  date:"[ มกราคม 2022 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  // image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ มกราคม 2023 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-              ]} />
+              <CardEx size={{width:420,height:300}} cardEx={universityEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>
@@ -144,48 +143,11 @@ const UniExperience = () => {
               color: '#2B3C2C',
               fontWeight: '700',
           }} className={`${fraunces.className}`}>
-              UNIVERSITY EXPERIENCE
+              ACTIVITIES
           </Typography>
 
           <div className={Style.itemContainer}>
-              <CardEx size={{width:250,height:150}} cardEx={[
-                {
-                  date:"[ มกราคม 2022 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  // image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ มกราคม 2023 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-              ]} />
+              <CardEx size={{width:250,height:150}} cardEx={universityEx.cardEx}/>
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>

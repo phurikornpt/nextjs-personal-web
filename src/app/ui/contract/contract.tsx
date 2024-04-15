@@ -6,7 +6,8 @@ import Image from 'next/image'
 import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
-
+import GitHubIcon from '@mui/icons-material/GitHub';
+import Link from 'next/link';
 const Contract = () => {
   return (
     <Box id='Skill' sx={{
@@ -42,7 +43,7 @@ const Contract = () => {
           color: '#fff',
         }}>
           <LocalPhoneOutlinedIcon/>
-          <Typography variant='h5' sx={{
+          <Typography variant='h6' sx={{
             color: '#fff',
             fontWeight: '400',
           }} className={`${param.className}`}>
@@ -55,15 +56,49 @@ const Contract = () => {
           gap: '10px',
           color: '#fff',
         }}>
-          <LocalPhoneOutlinedIcon/>
-          <Typography variant='h5' sx={{
+          <EmailOutlinedIcon/>
+          <Typography variant='h6' sx={{
             color: '#fff',
             fontWeight: '400',
           }} className={`${param.className}`}>
-              062-5976969
+              phurikornpt@gmail.com
           </Typography>
         </Box>
         <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          color: '#fff',
+        }}>
+          <GitHubIcon/>
+          <Link href="https://github.com/phurikornpt" className={`${param.className}`} style={{
+            color: '#fff',
+            fontWeight: '400',
+            textDecoration: 'none',
+          }}>
+            <Typography variant='h6'>
+                phurikornpt
+            </Typography>
+          </Link>
+        </Box>
+        <Box sx={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          color: '#fff',
+        }}>
+          <GitHubIcon/>
+          <Link href="https://github.com/phurkornt" className={`${param.className}`} style={{
+            color: '#fff',
+            // fontWeight: '400',
+            textDecoration: 'none',
+          }}>
+            <Typography variant='h6'>
+              my old git : phurkornt
+            </Typography>
+          </Link>
+        </Box>
+        {/* <Box sx={{
           display: 'flex',
           alignItems: 'center',
           gap: '10px',
@@ -76,21 +111,7 @@ const Contract = () => {
           }} className={`${param.className}`}>
               062-5976969
           </Typography>
-        </Box>
-        <Box sx={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '10px',
-          color: '#fff',
-        }}>
-          <LocalPhoneOutlinedIcon/>
-          <Typography variant='h5' sx={{
-            color: '#fff',
-            fontWeight: '400',
-          }} className={`${param.className}`}>
-              062-5976969
-          </Typography>
-        </Box>
+        </Box> */}
       </Box>
 
     </Box>

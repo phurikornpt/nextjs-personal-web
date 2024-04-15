@@ -33,7 +33,23 @@ const About = () => {
           </Box>
 
           <Grid container spacing={3}>
-            <Grid item xs={8} sx={{
+            <Grid item md={5} lg={3} sx={{
+            }}>
+              <Box sx={{
+                margin: '60px 0px 0px 0px',
+              }}>
+                <Image src='/profile/myself01.jpg' 
+                  width={300} 
+                  height={350}
+                  style={{
+                    objectFit: 'cover',
+                  }}
+                  alt='profile' 
+                />
+
+              </Box>
+            </Grid>
+            <Grid item md={7} lg={7} sx={{
             }}>
               <Box sx={{
                 margin: '60px 0px 0px 0px',

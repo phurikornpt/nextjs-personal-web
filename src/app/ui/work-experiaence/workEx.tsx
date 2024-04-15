@@ -5,10 +5,62 @@ import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
 
 import Style from './style.module.css'
-import CardEx from '../share/card-ex'
+import CardEx, { CardExProps } from '../share/card-ex'
 import { IconButton } from '@mui/material';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+
+const workEx:Pick<CardExProps,'cardEx'> = {
+  cardEx:[
+    {
+      date:"[ มกราคม 2022 ] ",
+      title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
+      description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
+Nodejs/Express.js , EJS , Access
+      `,
+      image: "/images/work-ex/shabu/s1.png",
+      tools: ['/images/tools/node.png','/images/tools/access.png'],
+    },
+    {
+      date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
+      title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
+      description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ 
+สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
+Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
+      `,
+      image: "/images/work-ex/robot/robot.png",
+      tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
+    },
+    {
+      date:"[ กันยายน 2023 ] ",
+      title: "ช่วยงานวิจัยของมหาวิทยาลัย ตู้บริจาคข้าวสาร ",
+      description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับ เว็บ Dashboard 
+เเสดงผลข้อมูลจำนวนผู้ใช้งานเครื่องตู้ข้าวสาร
+      `,
+      image: "/images/work-ex/sarana/s1.png",
+      tools: ['/images/tools/php.png','/images/tools/mysql.png','/images/tools/hostinger.png'],
+    },
+    {
+      date:"[ พฤศจิกายน 2023  - เมษายน 2024 ]",
+      title: "ฝึกงานตำเเหน่ง Backend Developer บริษัท Codemonday ",
+      description: ``,
+      image: "/images/work-ex/sarana/s1.png",
+      tools: [],
+    },
+    {
+      date:"[ เมษายน 2024 ]",
+      title: "Dashboard เเสดงข้อมูลสินค้า Realtime",
+      description: `พัฒนาระบบ Dashboard ด้วย Websocket เเสดงข้อมูลสินค้าเเบบ realtime  `,
+      image: "/images/work-ex/dashboard/dash01.png",
+      tools: [
+        '/images/tools/node.png',
+        '/images/tools/mariadb.png',
+        '/images/tools/ws.png',
+      ],
+    },
+  ]
+}
+
 const WorkExperience = () => {
   const sliderRef = useRef<any>(null);
   const scroll = 450;
@@ -79,44 +131,7 @@ const WorkExperience = () => {
                   color: 'rgb(0,20,0,0.65)',
                 }}/>
               </IconButton>
-              <CardEx size={{width:420,height:300}} cardEx={[
-                {
-                  date:"[ มกราคม 2022 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  // image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ มกราคม 2023 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-              ]} />
+              <CardEx size={{width:420,height:300}} cardEx={workEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>
@@ -147,44 +162,7 @@ const WorkExperience = () => {
           </Typography>
 
           <div className={Style.itemContainer}>
-              <CardEx size={{width:250,height:150}} cardEx={[
-                {
-                  date:"[ มกราคม 2022 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-                  title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-                  description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ สร้างแผนที่ สร้างแผนการเคลื่อนที่ เเละเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-                  Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
-                  `,
-                  // image: "/images/work-ex/robot/robot.png",
-                  tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
-                },
-                {
-                  date:"[ มกราคม 2023 ] ",
-                  title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-                  description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-                  Nodejs/Express.js , EJS , Access
-                  `,
-                  image: "/images/work-ex/shabu/s1.png",
-                  tools: ['/images/tools/node.png','/images/tools/access.png'],
-                },
-              ]} />
+              <CardEx size={{width:250,height:150}} cardEx={workEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>

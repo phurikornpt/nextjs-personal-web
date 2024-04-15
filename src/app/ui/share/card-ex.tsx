@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { paramThai } from '../fonts'
 
 
-type CardExProps = {
+export type CardExProps = {
   cardEx:{
     date:string,
     title: string,
@@ -72,6 +72,7 @@ const CardEx = (props:CardExProps) => {
             <Typography variant='body1' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
+              whiteSpace: 'pre',
             }} className={`${paramThai.className}`}>
                 {value.title}
             </Typography>
@@ -81,6 +82,7 @@ const CardEx = (props:CardExProps) => {
               fontWeight: '400',
               marginTop: '10px',
               fontSize: '0.8rem',
+              whiteSpace: 'pre',
             }} className={`${paramThai.className}`}>
                 {value.description}
             </Typography>
@@ -88,13 +90,13 @@ const CardEx = (props:CardExProps) => {
               display:'flex',
               alignItems: 'center',
               marginTop: '25px',
-              gap: '5px',
+              gap: '15px',
             }}>
               {value.tools.map((tool) => {
                 return (<>
                     <Image
                     src={tool}
-                    width={64}
+                    width={52}
                     height={32}
                     alt="Picture of the author"
                     style={{
