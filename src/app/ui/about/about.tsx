@@ -3,12 +3,15 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
-const about = `ผมนาย ภูริกรณ์ ทองย้อย  กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ (EnET) 
+const aboutContent = `ผมนาย ภูริกรณ์ ทองย้อย ชื่อเล่นภู กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ 
 คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-กำลังจะจบการศึกษาในเดือนเมษายนครับ 
-ผ่านการฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือน
-ในตอนนี้ผมกำลังมองหางานในตำเเหน่ง Junior Backend Developer
-พร้อมเริ่มงานวันที่ 1 พฤษภาคม 2567 นี้ครับ
+กำลังจะจบการศึกษาในเดือนเมษายนนี้ครับ เเละเคยฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือนครับ
+ซึ่ง Stack ที่ได้จับบ่อยๆจะเป็น
+  • Typescript/Nodejs/Express
+  • Prisma/MongoDB 
+  • Joi , Zod
+ในตอนผมสนใจในสายงาน Backend Developer ครับ เเละตั้งเป้าไว้ว่าจะเป็น Fullstack Developer ในอนาคตครับ
+
 `
 const About = () => {
   return (
@@ -56,7 +59,7 @@ const About = () => {
                 fontWeight: '300',
                 whiteSpace: 'pre-line',
               }} className={`${paramThai.className}`}>
-                {about}
+                {aboutContent}
               </Typography>
         </Box>
       </Box>
@@ -68,7 +71,7 @@ const About = () => {
         background: 'rgb(230,231,225,.6)',
         color: 'black',
         padding: '50px 50px',
-        height: '35rem',
+        height: '40rem',
       }}>
           <Typography variant='h4' sx={{
               color: '#2B3C2C',
@@ -95,7 +98,7 @@ const About = () => {
                 fontWeight: '300',
                 whiteSpace: 'pre-line',
               }} className={`${paramThai.className}`}>
-                {about}
+                {aboutContent}
               </Typography>
               
           </Box>

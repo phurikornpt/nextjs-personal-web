@@ -1,10 +1,12 @@
 "use client"
 import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
-import { fraunces, param, paramThai } from '../fonts'
-import Image from 'next/image'
 import { Link } from 'react-scroll'
+import { fraunces, paramThai } from '../fonts'
 
+const profileContent = `
+สวัสดีครับ ผมชื่อภูนะครับ เป็นนักศึกษาอยู่ชั้นปีที่ 4 กำลังจะจบการศึกษาในช่วงเดือนเมษายน 2024 ครับ
+เเละใน Website นี้จะเป็น Profile ของผมครับ
+`
 const Profile = () => {
   const {
     offsetScroll,
@@ -15,6 +17,7 @@ const Profile = () => {
   }
   return (
     <Box id='Profile'>
+      {/* Desktop */}
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
         backgroundColor: 'white',
@@ -26,87 +29,92 @@ const Profile = () => {
         backgroundPosition:'center',
         backgroundSize:'cover',
       }}>
-        <Grid container spacing={3}>
-            <Grid item xs={6} sx={{
+        <Grid container>
+          <Grid item xs={1}></Grid>
+          <Grid item xs={10}>
+            <Box sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: '50px',
+              margin: '100px auto',
+              background: 'rgb(255,255,255,.75)',
             }}>
-              <Box sx={{
-                padding: '50px 50px',
-                margin: '100px 0px 0px 5vw ',
-                background: 'rgb(255,255,255,.85)',
-              }}>
-                <Typography variant='h3' sx={{
-                    color: '#2B3C2C',
-                    fontWeight: '700',
-                  }} className={`${fraunces.className}`}>
-                    Hello world
-                </Typography>
+              <Typography variant='h3' sx={{
+                  color: '#2B3C2C',
+                  fontWeight: '700',
+                }} className={`${fraunces.className}`}>
+                  Hello world
+              </Typography>
 
-                <Typography variant='h6' sx={{
-                    color: '#2B3C2C',
-                    fontWeight: '500',
-                    marginTop: '20px',
-                  }} className={`${paramThai.className}`}>
-                    สวัสดีครับ ผมชื่อภูนะครับเป็นนักศึกษาชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
-                    ผมสนใจในตำเเหน่ง Junior Backend Developer ครับ เเละใน Website นี้จะเป็น Profile ของผมครับ
-                </Typography>
-                
-                <Box sx={{
+              <Typography variant='h6' sx={{
+                  color: '#2B3C2C',
+                  fontWeight: '500',
+                  marginTop: '20px',
+                  maxWidth:'80%',
+                }} className={`${paramThai.className}`}>
+                  {profileContent}
+              </Typography>
+              
+              <Box sx={{
                 marginTop: '45px',
                 display: 'flex',
                 gap: '20px',
               }}>
 
-                <Button variant="outlined" sx={{
-                  background: 'white',
+              <Button variant="outlined" sx={{
+                background: 'white',
+                color: '#2B3C2C',
+                borderRadius: '0px',
+                borderColor: '#2B3C2C',
+                textTransform: 'none',
+                padding: '20px 25px',
+                '&:hover': {
+                  backgroundColor: '#2B3C2C',
+                  color: 'white',
+                }
+              }}>
+                <Typography variant='h6' sx={{
+                  fontWeight: '700',
+                }} className={`${fraunces.className}`}>
+                  Download Resume
+                </Typography>
+              </Button>
+
+              <Button variant="contained" sx={{
+                background: '#2B3C2C',
+                color: 'white',
+                borderRadius: '0px',
+                textTransform: 'none',
+                padding: '20px 25px',
+                '&:hover': {
+                  backgroundColor: 'white',
                   color: '#2B3C2C',
-                  borderRadius: '0px',
-                  borderColor: '#2B3C2C',
-                  textTransform: 'none',
-                  padding: '20px 25px',
-                  '&:hover': {
-                    backgroundColor: '#2B3C2C',
-                    color: 'white',
-                  }
-                }}>
+                }
+              }}>
+                <Link
+                  style={{cursor:'pointer'}}
+                  to="Contract" 
+                  spy={true} 
+                  smooth={true} 
+                  offset={offsetScroll} 
+                  duration={durationScroll}
+                >
                   <Typography variant='h6' sx={{
                     fontWeight: '700',
                   }} className={`${fraunces.className}`}>
-                    Download Resume
+                    Contract Me
                   </Typography>
-                </Button>
-
-                <Button variant="contained" sx={{
-                  background: '#2B3C2C',
-                  color: 'white',
-                  borderRadius: '0px',
-                  textTransform: 'none',
-                  padding: '20px 25px',
-                  '&:hover': {
-                    backgroundColor: 'white',
-                    color: '#2B3C2C',
-                  }
-                }}>
-                  <Link
-                    style={{cursor:'pointer'}}
-                    to="Contract" 
-                    spy={true} 
-                    smooth={true} 
-                    offset={offsetScroll} 
-                    duration={durationScroll}
-                  >
-                    <Typography variant='h6' sx={{
-                      fontWeight: '700',
-                    }} className={`${fraunces.className}`}>
-                      Contract Me
-                    </Typography>
-                  </Link>
-                </Button>
-              </Box>
-              </Box>
-            </Grid>
+                </Link>
+              </Button>
+            </Box>
+            </Box>
+          </Grid>
+          <Grid item xs={1}></Grid>
         </Grid>
       </Box>
-
+      {/* Mobile */}
       <Box sx={{
         display: { xs: 'flex', md: 'none'},
         backgroundColor: 'white',
@@ -138,8 +146,7 @@ const Profile = () => {
                   fontWeight: '500',
                   marginTop: '20px',
                 }} className={`${paramThai.className}`}>
-                  สวัสดีครับผมชื่อภูนะครับเป็นนักศึกษาชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
-                  เเละใน Website นี้จะเป็น Profile ของผมครับ 
+                  {profileContent}
               </Typography>
 
               <Box sx={{
