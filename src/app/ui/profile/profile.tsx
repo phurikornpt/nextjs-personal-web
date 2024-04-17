@@ -99,7 +99,6 @@ const Profile = () => {
         height: '50rem',
         backgroundImage:'url(profile/bg-image.jpg)',
         backgroundSize:'cover',
-        backgroundRepeat:'repeat',
       }}>
         <Grid container>
           <Grid item xs={12} sx={{

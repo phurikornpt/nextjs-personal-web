@@ -50,12 +50,13 @@ const Skill = () => {
       background:'url(/images/bg-02.jpg)',
       backgroundPosition:'center',
       backgroundSize:'cover',
-      height: '50rem',
+      height: '55rem',
 
     }}>
       
       <Box sx={{
-        margin: '80px 0px 30px 0px',
+        display: {xs:'none',md:'flex'},
+        marginBottom: '50px'
       }}>
         <Typography variant='h3' sx={{
             color: '#2B3C2C',
@@ -65,12 +66,24 @@ const Skill = () => {
         </Typography>
       </Box>
 
+      {/* for mobile */}
       <Box sx={{
-        margin:'0px 80px 80px 80px',
-        width: '80%',
+        display: {xs:'flex',md:'none'},
+        margin:'50px 0px'
+      }}>
+        <Typography variant='h4' sx={{
+            color: '#2B3C2C',
+            fontWeight: '700',
+        }} className={`${fraunces.className}`}>
+            SKILLS
+        </Typography>
+      </Box>
+
+      <Box sx={{
+        // width: '80%',
         // height: '80%',
         background: 'rgba(255, 255, 255, 0.55)',
-        padding: '50px',
+        padding: '70px 30px',
       }}>
         <Grid container sx={{
           textAlign: 'center',

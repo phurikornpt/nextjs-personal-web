@@ -3,16 +3,20 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
-
+const about = `ผมนาย ภูริกรณ์ ทองย้อย  กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ (EnET) 
+คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+กำลังจะจบการศึกษาในเดือนเมษายนครับ 
+ผ่านการฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือน
+ในตอนนี้ผมกำลังมองหางานในตำเเหน่ง Junior Backend Developer
+พร้อมเริ่มงานวันที่ 1 พฤษภาคม 2567 นี้ครับ
+`
 const About = () => {
   return (
     <Box id='About'>
+      {/* Desktop */}
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
         flexDirection: 'column',
-        // gap: '20px',
-        // alignItems: 'center',
-        // justifyContent: 'center',
         background: 'rgb(230,231,225,.6)',
         color: 'black',
         fontSize: '2rem',
@@ -32,51 +36,69 @@ const About = () => {
               </Typography>
           </Box>
 
-          <Grid container spacing={3}>
-            <Grid item md={5} lg={3} sx={{
-            }}>
-              <Box sx={{
-                margin: '60px 0px 0px 0px',
-              }}>
-                <Image src='/profile/myself01.jpg' 
+        
+        </Box>
+        <Box sx={{
+          margin: '50px 0px 30px 150px',
+          display: 'flex',
+          gap:'20px'
+        }}>
+              <Image src='/profile/myself01.jpg' 
                   width={300} 
                   height={350}
                   style={{
                     objectFit: 'cover',
                   }}
                   alt='profile' 
-                />
-
-              </Box>
-            </Grid>
-            <Grid item md={7} lg={7} sx={{
-            }}>
-              <Box sx={{
-                margin: '60px 0px 0px 0px',
+              />
+              <Typography variant='h6' sx={{
+                color: '#2B3C2C',
+                fontWeight: '300',
+                whiteSpace: 'pre-line',
+              }} className={`${paramThai.className}`}>
+                {about}
+              </Typography>
+        </Box>
+      </Box>
+      {/* Mobile */}
+      <Box sx={{
+        display: { xs: 'flex', md: 'none'},
+        flexDirection: 'column',
+        alignItems: 'center',
+        background: 'rgb(230,231,225,.6)',
+        color: 'black',
+        padding: '50px 50px',
+        height: '35rem',
+      }}>
+          <Typography variant='h4' sx={{
+              color: '#2B3C2C',
+              fontWeight: '700',
+              marginBottom: '30px',
+          }} className={`${fraunces.className}`}>
+              ABOUT
+          </Typography>
+          <Image src='/profile/myself01.jpg' 
+                width={250} 
+                height={200}
+                style={{
+                  objectFit: 'contain',
+                }}
+                alt='profile' 
+          />
+          <Box sx={{
+                margin: '30px 0px 0px 0px',
               }}>
 
-              <Typography variant='h6' sx={{
+              <Typography variant='body1' sx={{
                 color: '#2B3C2C',
                 
                 fontWeight: '300',
-                whiteSpace: 'pre-lin',
+                whiteSpace: 'pre-line',
               }} className={`${paramThai.className}`}>
-                ผมนาย ภูริกรณ์ ทองย้อย  กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ (EnET) 
-                คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม
-                มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-                กำลังจะจบการศึกษาในเดือนเมษายนครับ 
-                ผ่านการฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือน
-                ในตอนนี้ผมกำลังมองหางานในตำเเหน่ง Junior Backend Developer
-                พร้อมเริ่มงานวันที่ 1 พฤษภาคม 2567 นี้ครับ
+                {about}
               </Typography>
               
-              </Box>
-            </Grid>
-          </Grid>
-          
-
-        </Box>
-
+          </Box>
       </Box>
     </Box>
   )

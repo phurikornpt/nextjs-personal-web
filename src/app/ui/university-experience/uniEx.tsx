@@ -13,33 +13,43 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 const universityEx:Pick<CardExProps,'cardEx'> = {
   cardEx:[
     {
-      date:"[ มกราคม 2022 ] ",
+      date:"[ กันยายน 2021 ] ",
       title: "ส่งมอบ Robot ให้กับกระทรวง อว. สู้ภัยโควิค",
-      description: `ทีมโปรแกรมควบคุมหุ่นยนต์ไอพ่นละอองฝอย (ULV) เเละ หุ่นยนต์ฉายแสง UVC ฆ่าเชื้อโรคและไวรัส`,
+      description: `ทีมโปรแกรมพัฒนาโปรแกรมควบคุมหุ่นยนต์
+      • ไอพ่นละอองฝอย (ULV)
+      • หุ่นยนต์ฉายแสง UVC ฆ่าเชื้อโรคและไวรัส`,
       image: "/images/activity/robot.jpg",
       tools: [],
     },
     {
-      date:"[ มกราคม 2022 ] ",
+      date:"[ มีนาคม 2022 ] ",
       title: "คว้ารางวัลรองชนะเลิศอันดับ 2 จากการแข่งขันหุ่นยนต์รายการ CARC",
-      description: `ทีมโปรแกรม`,
+      description: `ทีมโปรแกรมพัฒนาโปรแกรมควบคุมหุ่นยนต์ในการเเข่งขัน
+เป็นรายการเเข่งขันหุ่นยนต์อัตโนมัติทำภารกิจเช่น
+      • เเยกสีของลูกบอล
+      • สเเกน QR Code
+      • ขับเคลื่อนหุ่นยนต์ให้เดินตามเส้นทางที่กำหนด
+       `,
       image: "/images/activity/carc.jpg",
       tools: [],
     },
     {
-      date:"[ มกราคม 2022 ] ",
+      date:"[ 2021 - 2023 ] ",
       title: "เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์",
       description: `เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์ สอนเขียนโปรแกรมภาษา C/C++ 
-ควบคุมหุ่นยนต์ ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ `,
+ควบคุมหุ่นยนต์ ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
+      • สอนน้องๆให้รู้จักกับหุ่นยนต์
+      • สอนเขียนโปรแกรมภาษา C/C++
+        `,
       image: "/images/activity/stem.jpg",
       tools: [],
     },
     {
       date:"[ 2021 - ปัจุบัน ]",
       title: "งานพิเศษ",
-      description: `เป็นติวเตอร์สอนเขียนโปรแกรม
-● Python
-● Arduino / Robot`,
+      description: `เป็นติวเตอร์สอนเขียนโปรแกรมโดยเน้นที่ Project Base Learning
+      • Python
+      • Arduino / Robot`,
       image: "/images/activity/tutor.png",
       tools: [],
     },
@@ -62,7 +72,6 @@ const UniExperience = () => {
       {/* Desktop */}
       <Box id='Skill' sx={{
       display: { xs: 'none', md: 'flex'},
-      justifyContent: 'start',
       flexDirection: 'column',
       height: '60rem',
       background:'rgb(235,235,235,0.45)',
@@ -75,6 +84,7 @@ const UniExperience = () => {
           <Typography variant='h3' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
+              marginBottom:'50px',
           }} className={`${fraunces.className}`}>
               ACTIVITIES
           </Typography>
@@ -142,6 +152,7 @@ const UniExperience = () => {
           <Typography variant='h4' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
+              textAlign: 'center'
           }} className={`${fraunces.className}`}>
               ACTIVITIES
           </Typography>
