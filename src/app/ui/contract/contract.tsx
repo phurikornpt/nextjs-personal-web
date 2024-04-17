@@ -1,13 +1,11 @@
 
-import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
-import { fraunces, param, paramThai } from '../fonts'
-import Image from 'next/image'
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
+import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
+import { fraunces, param } from '../fonts';
 const Contract = () => {
   return (
     <Box id='Contract'>
@@ -33,10 +31,10 @@ const Contract = () => {
         </Box>
 
         <Box sx={{
-          margin: '20px 150px 0px 220px',
           display: 'flex',
+          margin: '20px 0px 0px 220px',
           flexDirection: 'column',
-          gap: '30px',
+          gap: '20px',
         }}>
           <Box sx={{
             display: 'flex',
@@ -100,20 +98,29 @@ const Contract = () => {
               </Typography>
             </Link>
           </Box>
-          {/* <Box sx={{
+          <Box sx={{
             display: 'flex',
             alignItems: 'center',
             gap: '10px',
             color: '#fff',
           }}>
-            <LocalPhoneOutlinedIcon/>
-            <Typography variant='h5' sx={{
-              color: '#fff',
-              fontWeight: '400',
-            }} className={`${param.className}`}>
-                062-5976969
+            <Image
+              src='/images/contract/line-logo.png' 
+              width={24} 
+              height={24}
+              style={{
+                color: '#fff',
+                objectFit: 'contain',
+                filter: 'invert(1)'
+              }}
+              alt='profile'
+            >
+            </Image>
+            <Typography variant='h6'>
+              phurkorn
             </Typography>
-          </Box> */}
+          </Box>
+    
         </Box>
 
       </Box>
@@ -141,10 +148,10 @@ const Contract = () => {
         </Box>
 
         <Box sx={{
-          margin: '20px 0px 50px 60px',
+          margin: '20px 0px 50px 100px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '30px',
+          gap: '20px',
         }}>
           <Box sx={{
             display: 'flex',
@@ -201,11 +208,35 @@ const Contract = () => {
             <Link href="https://github.com/phurkornt" className={`${param.className}`} style={{
               color: '#fff',
               textDecoration: 'none',
+              fontWeight: '400',
             }}>
               <Typography variant='body1'>
                 second git : phurkornt
               </Typography>
             </Link>
+          </Box>
+          <Box sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            color: '#fff',
+          }}>
+            <Image
+              src='/images/contract/line-logo.png' 
+              width={24} 
+              height={24}
+              style={{
+                color: '#fff',
+                objectFit: 'contain',
+                filter: 'invert(1)',
+                fontWeight: '400',
+              }}
+              alt='profile'
+            >
+            </Image>
+            <Typography variant='body1'>
+              phurkorn
+            </Typography>
           </Box>
         </Box>
 

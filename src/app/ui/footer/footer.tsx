@@ -1,11 +1,6 @@
 
-import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
-import { fraunces, param, paramThai } from '../fonts'
-import Image from 'next/image'
-import LocalPhoneOutlinedIcon from '@mui/icons-material/LocalPhoneOutlined';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import { Box, Typography } from '@mui/material';
+import { param } from '../fonts';
 
 const Footer = () => {
   return (
@@ -21,14 +16,14 @@ const Footer = () => {
       <Typography  sx={{
           color: '#fff',
           fontWeight: '300',
-          fontSize:'0.6rem'
+          fontSize:'0.75rem'
       }} className={`${param.className}`}>
-            Created by phurikorn.t at 2024 used with nextjs  / ui with mui .
+            Created by phurikorn.t at 2024 with Typescript + nextjs + mui .
       </Typography>
       <Typography  sx={{
           color: '#fff',
           fontWeight: '300',
-          fontSize:'0.4rem',
+          fontSize:'0.55rem',
           alignSelf:'end',
           marginRight:'20px'
       }} className={`${param.className}`}>
