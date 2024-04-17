@@ -68,7 +68,7 @@ const UniExperience = () => {
     setLeftButton(false)
   }
   return (
-    <Box>
+    <Box id='UniExperience'>
       {/* Desktop */}
       <Box id='Skill' sx={{
       display: { xs: 'none', md: 'flex'},

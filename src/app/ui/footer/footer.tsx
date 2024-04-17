@@ -10,7 +10,7 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 const Footer = () => {
   return (
     <Box id='Skill' sx={{
-      display: { xs: 'none', md: 'flex'},
+      display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
@@ -18,12 +18,23 @@ const Footer = () => {
       background:'#171717',
     }}>
       
-      <Typography variant='body2' sx={{
-            color: '#fff',
-            fontWeight: '300',
-          }} className={`${param.className}`}>
-            this website make by phurikorn.t at 2024 create with nextjs  / ui with mui .
+      <Typography  sx={{
+          color: '#fff',
+          fontWeight: '300',
+          fontSize:'0.6rem'
+      }} className={`${param.className}`}>
+            Created by phurikorn.t at 2024 used with nextjs  / ui with mui .
       </Typography>
+      <Typography  sx={{
+          color: '#fff',
+          fontWeight: '300',
+          fontSize:'0.4rem',
+          alignSelf:'end',
+          marginRight:'20px'
+      }} className={`${param.className}`}>
+            🔥YNWA
+      </Typography>
+
     </Box>
   )
 }

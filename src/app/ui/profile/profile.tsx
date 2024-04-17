@@ -1,12 +1,20 @@
-
+"use client"
 import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
+import { Link } from 'react-scroll'
 
 const Profile = () => {
+  const {
+    offsetScroll,
+    durationScroll
+  } = {
+    offsetScroll: -50,
+    durationScroll: 800
+  }
   return (
-    <>
+    <Box id='Profile'>
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
         backgroundColor: 'white',
@@ -78,11 +86,20 @@ const Profile = () => {
                     color: '#2B3C2C',
                   }
                 }}>
-                  <Typography variant='h6' sx={{
-                    fontWeight: '700',
-                  }} className={`${fraunces.className}`}>
-                    Contract Me
-                  </Typography>
+                  <Link
+                    style={{cursor:'pointer'}}
+                    to="Contract" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={offsetScroll} 
+                    duration={durationScroll}
+                  >
+                    <Typography variant='h6' sx={{
+                      fontWeight: '700',
+                    }} className={`${fraunces.className}`}>
+                      Contract Me
+                    </Typography>
+                  </Link>
                 </Button>
               </Box>
               </Box>
@@ -159,11 +176,20 @@ const Profile = () => {
                     color: '#2B3C2C',
                   }
                 }}>
-                  <Typography variant='body1' sx={{
-                    fontWeight: '700',
-                  }} className={`${fraunces.className}`}>
-                    Contract Me
-                  </Typography>
+                  <Link
+                    style={{cursor:'pointer'}}
+                    to="Contract" 
+                    spy={true} 
+                    smooth={true} 
+                    offset={offsetScroll} 
+                    duration={durationScroll}
+                  >
+                    <Typography variant='body1' sx={{
+                      fontWeight: '700',
+                    }} className={`${fraunces.className}`}>
+                      Contract Me
+                    </Typography>
+                  </Link>
                 </Button>
               </Box>
 
@@ -175,7 +201,7 @@ const Profile = () => {
           </Grid>
         </Grid>
       </Box>
-    </>
+    </Box>
   )
 }
 

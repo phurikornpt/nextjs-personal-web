@@ -51,16 +51,15 @@ const Skill = () => {
       backgroundPosition:'center',
       backgroundSize:'cover',
       height: '55rem',
-
     }}>
       
       <Box sx={{
         display: {xs:'none',md:'flex'},
-        marginBottom: '50px'
       }}>
         <Typography variant='h3' sx={{
             color: '#2B3C2C',
             fontWeight: '700',
+            marginBottom:'70px'
         }} className={`${fraunces.className}`}>
             SKILLS
         </Typography>
@@ -69,21 +68,20 @@ const Skill = () => {
       {/* for mobile */}
       <Box sx={{
         display: {xs:'flex',md:'none'},
-        margin:'50px 0px'
       }}>
         <Typography variant='h4' sx={{
             color: '#2B3C2C',
             fontWeight: '700',
+            margin:'50px 0px 50px 0px'
         }} className={`${fraunces.className}`}>
             SKILLS
         </Typography>
       </Box>
-
+      
       <Box sx={{
-        // width: '80%',
-        // height: '80%',
         background: 'rgba(255, 255, 255, 0.55)',
-        padding: '70px 30px',
+        padding:{xs:'20px 20px',md: '70px 30px'},
+        margin:{xs:'0px 50px 50px 50px',md:'0px'}
       }}>
         <Grid container sx={{
           textAlign: 'center',

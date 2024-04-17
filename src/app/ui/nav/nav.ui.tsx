@@ -3,24 +3,30 @@
 import { Box, Button, Divider, Drawer, IconButton, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import KeyboardTabIcon from '@mui/icons-material/KeyboardTab';
-
-import Link from 'next/link'
+import {Link} from 'react-scroll'
 import { fraunces } from '../fonts'
 import styles from './nav.module.css'
 import { useState } from 'react'
 
 const NavUi = () => {
+  const {
+    offsetScroll,
+    durationScroll
+  } = {
+    offsetScroll: -50,
+    durationScroll: 800
+  }
   const [isDrawer, setIsDrawer] = useState(false)
   const handleDrawerToggle = () => {
     setIsDrawer((prev) => !prev)
   }
   return (
     <>
-      {/* #EAF4E8 */}
-      {/* #2B3C2C */}
       {/* ------------------- Desktop -------------------*/}
-
       <Box sx={{
+        position: 'sticky',
+        top: '0',
+        zIndex:'1',
         display: { xs: 'none', md: 'flex'},
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -30,9 +36,14 @@ const NavUi = () => {
         padding:'20px 30px'
       }}>
         <Box >
-          <Link href="/" style={{
-            textDecoration: 'none',
-          }}>
+          <Link
+            style={{cursor:'pointer'}}
+            to="Profile" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
             <Typography variant='h4' sx={{
               color: '#EAF4E8',
               fontWeight: '500',
@@ -51,7 +62,14 @@ const NavUi = () => {
           gap: '15px'
         }} >
 
-          <Link href='#About' style={{textDecoration:'none'}}>
+          <Link 
+            style={{cursor:'pointer'}}
+            to="About" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
               <Typography variant='h6' sx={{
                 color: '#EAF4E8',
                 '&:hover': {
@@ -64,7 +82,14 @@ const NavUi = () => {
           </Link>
 
           <Box sx={{color:'#EAF4E8'}}>/</Box>
-          <Link href='/' style={{textDecoration:'none'}}>
+          <Link            
+            style={{cursor:'pointer'}}
+            to="Skill" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
               <Typography variant='h6' sx={{
                 color: '#EAF4E8',
                 '&:hover': {
@@ -72,12 +97,19 @@ const NavUi = () => {
                   textDecoration: 'underline solid #EAF4E8'
                 }
               }} className={`${fraunces.className}`}>
-                Skill
+                Skills
               </Typography>
           </Link>
 
           <Box sx={{color:'#EAF4E8'}}>/</Box>
-          <Link href='/' style={{textDecoration:'none'}}>
+          <Link
+            style={{cursor:'pointer'}}
+            to="WorkExperience" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
               <Typography variant='h6' sx={{
                 color: '#EAF4E8',
                 '&:hover': {
@@ -91,21 +123,30 @@ const NavUi = () => {
         </Box>
 
         <Box>
-          <Button variant="contained" sx={{
-            backgroundColor: '#EAF4E8',
-            color: '#2B3C2C',
-            borderRadius: '0px',
-            textTransform: 'none',
-            '&:hover': {
-              backgroundColor: '#EAF4Ef',
-            }
-          }}>
-            <Typography variant='h5' sx={{
-              fontWeight: '700',
-            }} className={`${fraunces.className}`}>
-              Contract
-            </Typography>
-          </Button>
+          <Link
+            style={{cursor:'pointer'}}
+            to="Contract" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
+            <Button variant="contained"  sx={{
+              backgroundColor: '#EAF4E8',
+              color: '#2B3C2C',
+              borderRadius: '0px',
+              textTransform: 'none',
+              '&:hover': {
+                backgroundColor: '#EAF4Ef',
+              }
+            }}>
+              <Typography variant='h5' sx={{
+                fontWeight: '700',
+              }} className={`${fraunces.className}`}>
+                Contract
+              </Typography>
+            </Button>
+          </Link>
 
         </Box>
       </Box>
@@ -113,6 +154,9 @@ const NavUi = () => {
       {/* ------------------- Mobile -------------------*/}
 
       <Box sx={{
+        position: 'sticky',
+        top: '0',
+        zIndex:'1',
         display: {  xs: 'flex', md: 'none'},
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -122,9 +166,14 @@ const NavUi = () => {
         padding:'20px 30px'
       }}>
         <Box >
-          <Link href="/" style={{
-            textDecoration: 'none',
-          }}>
+          <Link 
+            style={{cursor:'pointer'}}
+            to="Profile" 
+            spy={true} 
+            smooth={true} 
+            offset={offsetScroll} 
+            duration={durationScroll}
+          >
             <Typography variant='h4' sx={{
               color: '#EAF4E8',
               fontWeight: '500',
@@ -202,10 +251,18 @@ const NavUi = () => {
             >
 
 
-            <Link href='/' style={{
-              textDecoration:'none',
-              marginRight:'15px',
-              borderBottom: '1px solid #2B3C2C',
+            <Link 
+              onClick={handleDrawerToggle} 
+              to="About" 
+              spy={true} 
+              smooth={true} 
+              offset={offsetScroll} 
+              duration={durationScroll}
+              style={{
+                textDecoration:'none',
+                marginRight:'15px',
+                borderBottom: '1px solid #2B3C2C',
+                cursor:'pointer'
             }}>
               <Box sx={{
                 display:'flex',
@@ -225,10 +282,18 @@ const NavUi = () => {
               </Box>
             </Link>
 
-            <Link href='/' style={{
-              textDecoration:'none',
-              marginRight:'15px',
-              borderBottom: '1px solid #2B3C2C',
+            <Link 
+              onClick={handleDrawerToggle} 
+              to="Skill" 
+              spy={true} 
+              smooth={true} 
+              offset={offsetScroll} 
+              duration={durationScroll}
+              style={{
+                textDecoration:'none',
+                marginRight:'15px',
+                borderBottom: '1px solid #2B3C2C',
+                cursor:'pointer'
             }}>
               <Box sx={{
                 display:'flex',
@@ -243,16 +308,24 @@ const NavUi = () => {
                   fontWeight: '600',
                   padding:'15px',
                 }} className={`${fraunces.className}`}>
-                  Skill
+                  Skills
                 </Typography>
                 <KeyboardTabIcon />
               </Box>
             </Link>
 
-            <Link href='/' style={{
-              textDecoration:'none',
-              marginRight:'15px',
-              borderBottom: '1px solid #2B3C2C',
+            <Link 
+              onClick={handleDrawerToggle} 
+              to="WorkExperience" 
+              spy={true} 
+              smooth={true} 
+              offset={offsetScroll} 
+              duration={durationScroll}
+              style={{
+                textDecoration:'none',
+                marginRight:'15px',
+                borderBottom: '1px solid #2B3C2C',
+                cursor:'pointer'
             }}>
               <Box sx={{
                display:'flex',
@@ -272,25 +345,30 @@ const NavUi = () => {
               </Box>
             </Link>
 
-            <Button variant="contained" sx={{
-              backgroundColor: '#2B3C2C',
-              color: 'white',
-              borderRadius: '0px',
-              textTransform: 'none',
-              '&:hover': {
+            <Link
+              onClick={handleDrawerToggle} 
+              to="Contract" 
+              spy={true} 
+              smooth={true} 
+              offset={offsetScroll} 
+              duration={durationScroll}
+            >
+              <Button variant="contained" sx={{
                 backgroundColor: '#2B3C2C',
-              }
-            }}>
-              <Typography variant='h6' sx={{
-                // color: '#2B3C2C'
-              }} className={`${fraunces.className}`}>
-                Contract
-              </Typography>
-            </Button>
-              
-
-            
-
+                color: 'white',
+                width: '100%',
+                borderRadius: '0px',
+                textTransform: 'none',
+                '&:hover': {
+                  backgroundColor: '#2B3C2C',
+                }
+              }}>
+                <Typography variant='h6' sx={{
+                }} className={`${fraunces.className}`}>
+                  Contract
+                </Typography>
+              </Button>
+            </Link>
 
             </Box>
           </Box>

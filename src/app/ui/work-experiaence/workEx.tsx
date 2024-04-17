@@ -91,9 +91,9 @@ const WorkExperience = () => {
     setLeftButton(false)
   }
   return (
-    <Box>
+    <Box id='WorkExperience'>
       {/* Desktop */}
-      <Box id='Skill' sx={{
+      <Box sx={{
       display: { xs: 'none', md: 'flex'},
       justifyContent: 'start',
       flexDirection: 'column',
@@ -102,13 +102,13 @@ const WorkExperience = () => {
     }}>
         
         <Box sx={{
-          margin: '100px 0px 30px 150px',
+          marginLeft: '150px',
         }}>
 
           <Typography variant='h3' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
-              marginBottom:'50px'
+              margin:'100px 0px 50px 0px'
           }} className={`${fraunces.className}`}>
               WORK EXPERIENCE
           </Typography>
@@ -161,7 +161,7 @@ const WorkExperience = () => {
       </Box>
       
       {/* Mobile */}
-      <Box id='Skill' sx={{
+      <Box sx={{
         display: { xs: 'flex', md: 'none'},
         justifyContent: 'start',
         flexDirection: 'column',
@@ -169,14 +169,13 @@ const WorkExperience = () => {
         background:'rgb(235,235,235)',
       }}>
         
-        <Box sx={{
-          margin: '100px 10px 10px 10px',
-        }}>
-
+        <Box >
           <Typography variant='h4' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
-              textAlign: 'center'
+              textAlign: 'center',
+              margin: '100px 0px 50px 0px',
+
           }} className={`${fraunces.className}`}>
               WORK EXPERIENCE
           </Typography>

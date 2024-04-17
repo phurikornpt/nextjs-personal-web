@@ -14,15 +14,15 @@ const Contract = () => {
       {/* Desktop */}
       <Box sx={{
         display: { xs: 'none', md: 'flex'},
-        justifyContent: 'start',
+        // justifyContent: 'start',
         flexDirection: 'column',
         height: '30rem',
-        paddingBottom:'100px',
+        paddingBottom:'50px',
         background:'#2B3C2C',
       }}>
         
         <Box sx={{
-          margin: '100px 0px 30px 150px',
+          margin: '100px 0px 40px 150px',
         }}>
           <Typography variant='h3' sx={{
               color: '#fff',
@@ -33,7 +33,7 @@ const Contract = () => {
         </Box>
 
         <Box sx={{
-          margin: '20px 150px 90px 220px',
+          margin: '20px 150px 0px 220px',
           display: 'flex',
           flexDirection: 'column',
           gap: '30px',
@@ -117,20 +117,20 @@ const Contract = () => {
         </Box>
 
       </Box>
+
       {/* Mobile */}
       <Box sx={{
         display: { xs: 'flex', md: 'none'},
         // justifyContent: 'start',
         flexDirection: 'column',
-        alignItems: 'center',
-        height: '30rem',
-        paddingBottom:'100px',
+        alignItems: 'start',
         background:'#2B3C2C',
       }}>
         
         <Box sx={{
-          marginTop: '100px',
-          marginBottom: '50px',
+          marginTop: '50px',
+          marginBottom: '30px',
+          marginLeft: '40px',
         }}>
           <Typography variant='h4' sx={{
               color: '#fff',
@@ -141,7 +141,7 @@ const Contract = () => {
         </Box>
 
         <Box sx={{
-          margin: '20px 0px 90px 20px',
+          margin: '20px 0px 50px 60px',
           display: 'flex',
           flexDirection: 'column',
           gap: '30px',
@@ -210,6 +210,8 @@ const Contract = () => {
         </Box>
 
       </Box>
+
+      
     </Box>
   )
 }
