@@ -72,7 +72,7 @@ const Skill = () => {
         <Typography variant='h4' sx={{
             color: '#2B3C2C',
             fontWeight: '700',
-            margin:'50px 0px 50px 0px'
+            margin:'100px 0px 50px 0px'
         }} className={`${fraunces.className}`}>
             SKILLS
         </Typography>

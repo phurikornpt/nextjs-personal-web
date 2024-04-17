@@ -13,7 +13,7 @@ const NavUi = () => {
     offsetScroll,
     durationScroll
   } = {
-    offsetScroll: -50,
+    offsetScroll: -70,
     durationScroll: 800
   }
   const [isDrawer, setIsDrawer] = useState(false)

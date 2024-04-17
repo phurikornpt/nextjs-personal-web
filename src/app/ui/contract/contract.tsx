@@ -96,7 +96,7 @@ const Contract = () => {
               textDecoration: 'none',
             }}>
               <Typography variant='h6'>
-                my old git : phurkornt
+                second git : phurkornt
               </Typography>
             </Link>
           </Box>
@@ -203,7 +203,7 @@ const Contract = () => {
               textDecoration: 'none',
             }}>
               <Typography variant='body1'>
-                my old git : phurkornt
+                second git : phurkornt
               </Typography>
             </Link>
           </Box>
