@@ -4,7 +4,7 @@ import { Link } from 'react-scroll'
 import { fraunces, paramThai } from '../fonts'
 
 const profileContent = `
-สวัสดีครับ ผมชื่อภูนะครับ เป็นนักศึกษาอยู่ชั้นปีที่ 4 กำลังจะจบการศึกษาในช่วงเดือนเมษายน 2024 ครับ
+สวัสดีครับ ผมชื่อภูนะครับ เป็นนักศึกษาอยู่ชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
 เเละใน Website นี้จะเป็น Profile ของผมครับ
 `
 const Profile = () => {

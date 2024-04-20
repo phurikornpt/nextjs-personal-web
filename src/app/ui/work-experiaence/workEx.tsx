@@ -57,7 +57,10 @@ PHP , MySQL , Hostinger
     {
       date:"[ พฤศจิกายน 2023  - เมษายน 2024 ]",
       title: "ฝึกงานตำเเหน่ง Backend Developer บริษัท Codemonday ",
-      description: ``,
+      description: `• รับผิดชอบในการพัฒนา API และออกแบบฐานข้อมูลของ Module ที่ได้รับมอบหมาย
+• พัฒนาระบบ CMS เพื่อการจัดการเนื้อหาและข้อมูลสำหรับให้ User ใช้งาน
+• ออกแบบและพัฒนา Email Template สำหรับระบบ Mail sending
+• ประสานงานกับ Frontend Designer เเละ QA ในการพัฒนาโปรแกรม`,
       image: "/images/work-ex/internship/in01.png",
       tools: [],
     },
@@ -83,7 +86,6 @@ const WorkExperience = () => {
   const sliderRef = useRef<any>(null);
   const scroll = 450;
   const [leftButton, setLeftButton] = useState(false);
-
   const handleOn = () => {
     setLeftButton(true)
   }
@@ -150,7 +152,7 @@ const WorkExperience = () => {
                   color: 'rgb(0,20,0,0.65)',
                 }}/>
               </IconButton>
-              <CardEx size={{width:420,height:300}} cardEx={workEx.cardEx} />
+              <CardEx devices='desktop' cardEx={workEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>
@@ -169,7 +171,9 @@ const WorkExperience = () => {
         background:'rgb(235,235,235)',
       }}>
         
-        <Box >
+        <Box sx={{
+          margin: '0px 10px 10px 10px',
+        }}>
           <Typography variant='h4' sx={{
               color: '#2B3C2C',
               fontWeight: '700',
@@ -181,7 +185,7 @@ const WorkExperience = () => {
           </Typography>
 
           <div className={Style.itemContainer}>
-              <CardEx size={{width:250,height:150}} cardEx={workEx.cardEx} />
+              <CardEx devices='mobile' cardEx={workEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>

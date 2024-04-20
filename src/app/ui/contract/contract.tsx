@@ -117,7 +117,7 @@ const Contract = () => {
             >
             </Image>
             <Typography variant='h6'>
-              phurkorn
+              phurikorn
             </Typography>
           </Box>
     
@@ -235,7 +235,7 @@ const Contract = () => {
             >
             </Image>
             <Typography variant='body1'>
-              phurkorn
+              phurikorn
             </Typography>
           </Box>
         </Box>

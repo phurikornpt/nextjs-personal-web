@@ -11,24 +11,40 @@ export type CardExProps = {
     image?: string,
     tools: string[],
   }[],
-  size:{
-    width: number,
-    height: number,
-  },
+  devices?:string
 }
 
 const CardEx = (props:CardExProps) => {
   const {
     cardEx,
-    size
+    // size,
+    devices
   } = props
 
+  /*
+  ########################
+  Default size is Desktop
+  ########################
+  */
+
+  let size = {
+    width: 400,
+    height: 280,
+  }
+  let padding = '45px 25px 25px 25px'
+  switch (devices) {
+    case 'mobile':
+      size.width = 280
+      size.height = 180
+      // padding = '15px'
+      break
+  }
   return (
     cardEx.map((value,index) => {
       return (
         <Box key={index} sx={{
           margin: '5px 10px 0px 0px',
-          padding: '45px 25px 25px 25px',
+          padding: {padding},
           bgcolor:'rgb(255,255,255,0.85)',
           borderRadius: '0.5rem',
           maxWidth: '500px',
@@ -53,14 +69,12 @@ const CardEx = (props:CardExProps) => {
                 src={value?.image}
                 width={size.width}  
                 height={size.height}
-                // width={420}
-                // height={300}
-                // width={300}
-                // height={150}
                 alt="Picture of the author"
                 style={{
-                  objectFit: 'contain',
+                  margin: '10px 0px',
+                  // objectFit: 'fill',
                 }}
+                
               />
               : <></>
             }

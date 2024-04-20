@@ -60,7 +60,8 @@ const UniExperience = () => {
   const sliderRef = useRef<any>(null);
   const scroll = 450;
   const [leftButton, setLeftButton] = useState(false);
-
+  const [dtWidth , dtHeight] = [400,280]
+  const [mbWidth , mbHeight] = [280,180]
   const handleOn = () => {
     setLeftButton(true)
   }
@@ -126,7 +127,7 @@ const UniExperience = () => {
                   color: 'rgb(0,20,0,0.65)',
                 }}/>
               </IconButton>
-              <CardEx size={{width:420,height:300}} cardEx={universityEx.cardEx} />
+              <CardEx devices='desktop' cardEx={universityEx.cardEx} />
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>
@@ -158,7 +159,7 @@ const UniExperience = () => {
           </Typography>
 
           <div className={Style.itemContainer}>
-              <CardEx size={{width:250,height:150}} cardEx={universityEx.cardEx}/>
+              <CardEx devices='mobile' cardEx={universityEx.cardEx}/>
               <Box sx={{visibility:'hidden'}}>
                 HelloHelloHelloHelloHelloHello
               </Box>
