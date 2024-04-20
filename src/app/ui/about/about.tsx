@@ -4,13 +4,14 @@ import React from 'react'
 import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
 const aboutContent = `ผมนาย ภูริกรณ์ ทองย้อย ชื่อเล่นภู กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ 
-คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-กำลังจะจบการศึกษาในเดือนเมษายนนี้ครับ เเละเคยฝึกงานที่บริษัท Codemonday ตำเเหน่ง Backend Developer 4 เดือนครับ
+คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ กำลังจะจบการศึกษาในปีนี้ครับ
+
 ซึ่ง Stack ที่ได้จับบ่อยๆจะเป็น
   • Typescript/Nodejs/Express
   • Prisma/MongoDB 
   • Joi , Zod
-ในตอนผมสนใจในสายงาน Backend Developer ครับ เเละตั้งเป้าไว้ว่าจะเป็น Fullstack Developer ในอนาคตครับ
+  
+ผมสนใจในสายงาน Backend Developer ครับ เเละตั้งเป้าไว้ว่าจะเป็น Fullstack Developer ในอนาคตครับ
 
 `
 const About = () => {
