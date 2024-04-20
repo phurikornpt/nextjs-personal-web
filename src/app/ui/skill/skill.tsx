@@ -80,8 +80,8 @@ const Skill = () => {
       
       <Box sx={{
         background: 'rgba(255, 255, 255, 0.55)',
-        padding:{xs:'20px 20px',md: '70px 30px'},
-        margin:{xs:'0px 50px 50px 50px',md:'0px'}
+        padding:{xs:'5px 5px' ,sm:'20px 20px',md: '70px 30px'},
+        margin:{xs:'0px 15px 15px 15px' ,sm:'0px 50px 50px 50px',md:'0px'}
       }}>
         <Grid container sx={{
           textAlign: 'center',
