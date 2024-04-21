@@ -3,17 +3,61 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
 import { fraunces, param, paramThai } from '../fonts'
 import Image from 'next/image'
-const aboutContent = `ผมนาย ภูริกรณ์ ทองย้อย ชื่อเล่นภู กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ 
-คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ กำลังจะจบการศึกษาในปีนี้ครับ
+const content = [
+  {
+    title: 'About me',
+    content: `My name is Phurikorn Thongyoi and my nicknamed is Phu. 
+    I am currently studying in the fourth year of the 
+    Bachelor of Engineering Technology in Electronics Engineering program 
+    at the Faculty of Industrial Technology, King Mongkut's University of Technology North Bangkok.
+    I will be graduating this year.`
+  },
+  {
+    title: 'During my studies',
+    content: `I participated in the Robotics club,
+    which provided me with various experiences including competitions,
+    developing automation systems and
+    assist team activities, organizing STEM events
+    and being a lecturer to teach younger students about robots. `
+  },
+  {
+    title: 'My Internship at Software House company',
+    content: `I completed a 4-month internship as a Backend Developer at
+     a software house company, where I got the opportunity to work on real projects
+      in the development field. This experience made me excited about the constant challenges of 
+        new requirements and I developed a fondness for this line of work.
+    `
+  }
+]
+const aboutContent =
+`About me
+My name is Phurikorn Thongyoi and my nicknamed is Phu. 
+I am currently studying in the fourth year of the 
+Bachelor of Engineering Technology in Electronics Engineering program 
+at the Faculty of Industrial Technology, King Mongkut's University of Technology North Bangkok.
+I will be graduating this year.
 
-ซึ่ง Stack ที่ได้จับบ่อยๆจะเป็น
-  • Typescript/Nodejs/Express
-  • Prisma/MongoDB 
-  • Joi , Zod
-  
-ผมสนใจในสายงาน Backend Developer ครับ เเละตั้งเป้าไว้ว่าจะเป็น Fullstack Developer ในอนาคตครับ
+During my studies
+I participated in the Robotics club,
+which provided me with various experiences including competitions,
+developing automation systems and
+assist team activities, organizing STEM events
+and being a training speaker to teach younger students about robots. 
+
+My interest
 
 `
+// const aboutContent = `ผมนาย ภูริกรณ์ ทองย้อย ชื่อเล่นภู กำลังศึกษาอยู่ในระดับปริญญาตรี ปีที่ 4 สาขาเทคโนโลยีวิศวกรรมอิเล็กทรอนิกส์ 
+// คณะวิทยาลัยเทคโนโลยีอุตสาหกรรม มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ กำลังจะจบการศึกษาในปีนี้ครับ
+
+// ซึ่ง Stack ที่ได้จับบ่อยๆจะเป็น
+//   • Typescript/Nodejs/Express
+//   • Prisma/MongoDB 
+//   • Joi , Zod
+  
+// ผมสนใจในสายงาน Backend Developer ครับ เเละตั้งเป้าไว้ว่าจะเป็น Fullstack Developer ในอนาคตครับ
+
+// `
 const About = () => {
   return (
     <Box id='About'>
@@ -49,19 +93,49 @@ const About = () => {
         }}>
               <Image src='/profile/myself01.jpg' 
                   width={300} 
-                  height={350}
+                  height={370}
                   style={{
                     objectFit: 'cover',
                   }}
                   alt='profile' 
               />
-              <Typography variant='h6' sx={{
-                color: '#2B3C2C',
-                fontWeight: '300',
-                whiteSpace: 'pre-line',
-              }} className={`${paramThai.className}`}>
-                {aboutContent}
-              </Typography>
+              <Box sx={{
+                maxWidth: '52vw',
+              }}>
+                {
+                  content.map((item) => {
+                    return (<>
+                        <Typography variant='h6' sx={{
+                          color: '#2B3C2C',
+                          fontWeight: '500',
+                          whiteSpace: 'pre-line',
+                        }} className={`${fraunces.className}`}>
+                          {item.title}
+                        </Typography>
+                        <Typography variant='body1' sx={{
+                          color: 'rgba(0,0,0,.7)',
+                          fontWeight: '200',
+                        }} className={`${paramThai.className}`}>
+                          {item.content}
+                        </Typography>
+                    </>)
+                  })
+                }
+                {/* <Typography variant='h6' sx={{
+                  color: '#2B3C2C',
+                  fontWeight: '500',
+                  whiteSpace: 'pre-line',
+                }} className={`${fraunces.className}`}>
+                  {content[0].title}
+                </Typography>
+                <Typography variant='body1' sx={{
+                  color: '#2B3C2C',
+                  fontWeight: '300',
+                }} className={`${paramThai.className}`}>
+                  {content[0].content}
+                </Typography> */}
+                
+              </Box>
         </Box>
       </Box>
       {/* Mobile */}
@@ -71,8 +145,8 @@ const About = () => {
         alignItems: 'center',
         background: 'rgb(230,231,225,.6)',
         color: 'black',
-        padding: '50px 50px',
-        height: '40rem',
+        padding: {sm:'50px', xs: '50px 20px'},
+        // height: '40rem',
       }}>
           <Typography variant='h4' sx={{
               color: '#2B3C2C',
@@ -82,25 +156,44 @@ const About = () => {
               ABOUT
           </Typography>
           <Image src='/profile/myself01.jpg' 
-                width={250} 
-                height={200}
+                width={200} 
+                height={250}
                 style={{
                   objectFit: 'contain',
                 }}
                 alt='profile' 
           />
           <Box sx={{
-                margin: '30px 0px 0px 0px',
+                marginTop: '30px',
               }}>
 
-              <Typography variant='body1' sx={{
+                {
+                  content.map((item) => {
+                    return (<>
+                        <Typography variant='body1' sx={{
+                          color: '#2B3C2C',
+                          fontWeight: '600',
+                          whiteSpace: 'pre-line',
+                        }} className={`${fraunces.className}`}>
+                          {item.title}
+                        </Typography>
+                        <Typography variant='body2' sx={{
+                          color: 'rgba(0,0,0,.7)',
+                          fontWeight: '200',
+                        }} className={`${paramThai.className}`}>
+                          {item.content}
+                        </Typography>
+                    </>)
+                })
+              }
+              {/* <Typography variant='body1' sx={{
                 color: '#2B3C2C',
                 
                 fontWeight: '300',
                 whiteSpace: 'pre-line',
               }} className={`${paramThai.className}`}>
                 {aboutContent}
-              </Typography>
+              </Typography> */}
               
           </Box>
       </Box>

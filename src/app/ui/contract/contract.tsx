@@ -71,7 +71,7 @@ const Contract = () => {
             color: '#fff',
           }}>
             <GitHubIcon/>
-            <Link href="https://github.com/phurikornpt" className={`${param.className}`} style={{
+            <Link href="https://github.com/phurikornpt" target='_blank' className={`${param.className}`} style={{
               color: '#fff',
               fontWeight: '400',
               textDecoration: 'none',
@@ -88,7 +88,7 @@ const Contract = () => {
             color: '#fff',
           }}>
             <GitHubIcon/>
-            <Link href="https://github.com/phurkornt" className={`${param.className}`} style={{
+            <Link href="https://github.com/phurkornt" target='_blank' className={`${param.className}`} style={{
               color: '#fff',
               // fontWeight: '400',
               textDecoration: 'none',
@@ -188,7 +188,7 @@ const Contract = () => {
             color: '#fff',
           }}>
             <GitHubIcon/>
-            <Link href="https://github.com/phurikornpt" className={`${param.className}`} style={{
+            <Link href="https://github.com/phurikornpt" target='_blank' className={`${param.className}`} style={{
               color: '#fff',
               fontWeight: '400',
               textDecoration: 'none',
@@ -205,7 +205,7 @@ const Contract = () => {
             color: '#fff',
           }}>
             <GitHubIcon/>
-            <Link href="https://github.com/phurkornt" className={`${param.className}`} style={{
+            <Link href="https://github.com/phurkornt" target='_blank'className={`${param.className}`} style={{
               color: '#fff',
               textDecoration: 'none',
               fontWeight: '400',
