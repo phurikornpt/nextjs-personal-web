@@ -3,9 +3,7 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import { Link } from 'react-scroll'
 import { fraunces, paramThai } from '../fonts'
 
-const profileContent = `
-สวัสดีครับ ผมชื่อภูนะครับ เป็นนักศึกษาอยู่ชั้นปีที่ 4 กำลังจะจบการศึกษาในปีนี้ครับ
-เเละใน Website นี้จะเป็น Profile ของผมครับ
+const profileContent = `Hi, I'm Phu. I'm a fourth-year student will graduate this year. This webpage will be my profile.
 `
 const Profile = () => {
   const {
@@ -63,7 +61,7 @@ const Profile = () => {
                 gap: '20px',
               }}>
 
-              <Button variant="outlined" sx={{
+              <Button variant="outlined" href='/profile/phurikorn-resume.pdf' target='_blank' sx={{
                 background: 'white',
                 color: '#2B3C2C',
                 borderRadius: '0px',
@@ -155,7 +153,7 @@ const Profile = () => {
                 gap: '20px',
               }}>
 
-                <Button variant="contained" sx={{
+                <Button variant="contained" href='/profile/phurikorn-resume.pdf' target='_blank'  sx={{
                   background: 'white',
                   color: '#2B3C2C',
                   borderRadius: '0px',

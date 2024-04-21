@@ -13,45 +13,48 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 const universityEx:Pick<CardExProps,'cardEx'> = {
   cardEx:[
     {
-      date:"[ กันยายน 2021 ] ",
-      title: "ส่งมอบ Robot ให้กับกระทรวง อว. สู้ภัยโควิค",
-      description: `ทีมโปรแกรมพัฒนาโปรแกรมควบคุมหุ่นยนต์
-      • ไอพ่นละอองฝอย (ULV)
-      • หุ่นยนต์ฉายแสง UVC ฆ่าเชื้อโรคและไวรัส`,
+      date:"[ September 2021 ] ",
+      title: "Developing robots for the Ministry of Higher Education, Science, Research and Innovation combat the COVID-19 pandemic",
+      description: `The robotics programming development team is working on creating a system to control RF signals, allowing for movement
+      control, spraying commands, and UVC light 
+      projection. This includes 
+      `,
+      descriptionPreLine:`• mist spraying (ULV)
+      • UVC light projection
+      `,
       image: "/images/activity/robot.jpg",
-      tools: [],
+      tools: ['/images/tools/arduino.png'],
     },
     {
-      date:"[ มีนาคม 2022 ] ",
-      title: "คว้ารางวัลรองชนะเลิศอันดับ 1 จากการแข่งขันหุ่นยนต์รายการ CARC",
-      description: `ทีมโปรแกรมพัฒนาโปรแกรมควบคุมหุ่นยนต์ในการเเข่งขัน
-เป็นรายการเเข่งขันหุ่นยนต์อัตโนมัติทำภารกิจเช่น
-      • เเยกสีของลูกบอล
-      • สเเกน QR Code
-      • ขับเคลื่อนหุ่นยนต์ให้เดินตามเส้นทางที่กำหนด
-       `,
+      date:"[ March 2022 ] ",
+      title: "Second Place Winner Robot CARC Competition",
+      description: `The robotics programming development team participates in competitions involving autonomous robot missions such as `,
+      descriptionPreLine:`• separate balls colored 
+      • scanning QR codes
+      • driving robots to follow predefined 
+      `,
       image: "/images/activity/carc.jpg",
-      tools: [],
+      tools: ['/images/tools/arduino.png','/images/tools/labview.png'],
     },
     {
       date:"[ 2021 - 2023 ] ",
-      title: "เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์",
-      description: `เป็นวิทยากรงานอบรมระบบสะเต็มหุ่นยนต์ สอนเขียนโปรแกรมภาษา C/C++ 
-ควบคุมหุ่นยนต์ ที่มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ
-      • สอนน้องๆให้รู้จักกับหุ่นยนต์
-      • สอนเขียนโปรแกรมภาษา C/C++
-        `,
+      title: "Being a training speaker at the STEM Robotics event",
+      description: `As a trainer in robotics systems, I teach programming in C/C++ to control robots at King Mongkut's University of Technology North Bangkok.
+      `,
+      descriptionPreLine:`• Introducing students to robotics.
+      • Teaching programming in C/C++.`,
       image: "/images/activity/stem.jpg",
-      tools: [],
+      tools: ['/images/tools/arduino.png'],
     },
     {
-      date:"[ 2021 - ปัจุบัน ]",
-      title: "งานพิเศษ",
-      description: `เป็นติวเตอร์สอนเขียนโปรแกรมโดยเน้นที่ Project Base Learning
+      date:"[ 2021 - Present ]",
+      title: "Tutor",
+      description: `Tutor in programming`,
+      descriptionPreLine:`Base on project
       • Python
       • Arduino / Robot`,
       image: "/images/activity/tutor.png",
-      tools: [],
+      tools: ['/images/tools/arduino.png' , '/images/tools/python.png'],
     },
   ]
 }
@@ -142,7 +145,8 @@ const UniExperience = () => {
         display: { xs: 'flex', md: 'none'},
         justifyContent: 'start',
         flexDirection: 'column',
-        height: '45rem',
+        // height: '45rem',
+        paddingBottom: '50px',
         background:'rgb(235,235,235,0.45)',
       }}>
         

@@ -13,68 +13,60 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 const workEx:Pick<CardExProps,'cardEx'> = {
   cardEx:[
     {
-      date:"[ มกราคม 2022 ] ",
-      title: "พัฒนาเว็บไซต์ Management ของร้านชาบู",
-      description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับจัดการข้อมูลภายในร้าน
-ยกตัวอย่างของระบบ เช่น
-    • การตัดสต็อกสินค้ารายวัน
-    • รับวัตถุดิบเข้าระบบ
-    • การจัดการพนักงาน
-    • ออกรายงานยอดขาย
-
-Nodejs/Express.js , EJS , Microsoft Access
+      date:"[ January 2022 ] ",
+      title: "Develop a website for managing the Shabu Buffet restaurant.",
+      description: `Develop a website and design a database for internal data management within the restaurant. example`,
+      descriptionPreLine:`• Daily inventory management
+      • Raw material system intake
+      • Employee management
+      • Sales report generation 
       `,
       image: "/images/work-ex/shabu/s1.png",
       tools: ['/images/tools/node.png','/images/tools/ex.png','/images/tools/access.png'],
     },
     {
-      date:"[ พฤษภาคม 2022 - มกราคม 2023 ] ",
-      title: "ช่วยงานวิจัยของมหาวิทยาลัย พัฒนาระบบควบคุมหุ่นยนต์ AMR",
-      description: `พัฒนาเว็บไซต์ควบคุมการทำงานของหุ่นยนต์ 
-      • สร้างแผนที่ โดยควบคุมหุ่นยนต์เคลื่อนที่แบบ Manual
-      • สร้างแผนการเคลื่อนที่ เลือกตำเเหน่งเเละเส้นทางให้หุ่นยนต์
-      • ควบคุมRobot ควบคุมการเคลื่อนที่เเบบอัตโนมัติเเสดงผลตำเเหน่งหุ่นยนต์เรียลไทม์
-
-Ubuntu 18.04 , Nodejs/Express.js , EJS , Websocket , ROS
+      date:"[ May 2022 - January 2023 ] ",
+      title: "Assisting with university research: Developing AMR Robot",
+      description: `Develop a robot control website`,
+      descriptionPreLine:`• Create a map by manually controlling the mobile robot
+      • Create a movement plan, select the robot's position and path
+      • Automatically control the robot movement and display the robot's position in real time
       `,
       image: "/images/work-ex/robot/robot.png",
       tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
     },
     {
-      date:"[ กันยายน 2023 ] ",
-      title: "ช่วยงานวิจัยของมหาวิทยาลัย ตู้บริจาคข้าวสาร ",
-      description: `พัฒนาเว็บไซต์เเละออกเเบบ Database สำหรับเว็บ Dashboard 
-เเสดงผลข้อมูลจำนวนผู้ใช้งานเครื่องตู้ข้าวสาร
-      • เเสดงจำนวนผู้ใช้งานจำนวน 5 เครื่อง
-      • เเสดงระยะเวลาการใช้งานของเครื่อง
-      • สามารถเเสดงเป็น Week Month & Year
-
-PHP , MySQL , Hostinger
-      `,
+      date:"[ September 2023 ] ",
+      title: "Assisting with university research: Rice donates machine",
+      description: `Develop a website and design a database for website dashboard to show user data`,
+      descriptionPreLine:`• Display user data for 5 machine
+      • Show machine usage time
+      • Display for weekly, monthly or yearly data`,
       image: "/images/work-ex/sarana/s1.png",
       tools: ['/images/tools/php.png','/images/tools/mysql.png','/images/tools/hostinger.png'],
     },
     {
-      date:"[ พฤศจิกายน 2023  - เมษายน 2024 ]",
-      title: "ฝึกงานตำเเหน่ง Backend Developer บริษัท Codemonday ",
-      description: `• รับผิดชอบในการพัฒนา API และออกแบบฐานข้อมูลของ Module ที่ได้รับมอบหมาย
-• พัฒนาระบบ CMS เพื่อการจัดการเนื้อหาและข้อมูลสำหรับให้ User ใช้งาน
-• ออกแบบและพัฒนา Email Template สำหรับระบบ Mail sending
-• ประสานงานกับ Frontend Designer เเละ QA ในการพัฒนาโปรแกรม`,
+      date:"[ November 2023  - April 2024 ]",
+      title: "Backend Developer Internship at Codemonday",
+      description: ``,
+      descriptionPreLine:`• Responsible for developing APIs and designing the database schema for assigned modules.
+      • Develop a CMS system for content and data management for user accessibility.
+      • Design and develop email templates for the mail-sending system.
+      • Coordinate with frontend designers project manager and QA personnel in system development.
+      `,
       image: "/images/work-ex/internship/in01.png",
       tools: [],
     },
     {
-      date:"[ เมษายน 2024 ]",
-      title: "Dashboard เเสดงข้อมูลสินค้า Realtime",
-      description: `พัฒนาระบบ Dashboard ด้วย Websocket เเสดงข้อมูลสินค้าเเบบ realtime
-      • เเสดงข้อมูลสินค้าต่อระยะเวลาที่กำหนด
-      • คำนวนค่า OEE , Actual
-
-Nodejs , MariaDB , Websocket`,
+      date:"[ April 2024 ]",
+      title: "Develop a website dashboard to show the product information in real-time",
+      description: `Develop a website dashboard to show the product information in real-time by using WebSocket`,
+      descriptionPreLine:`• Display the product information for a specified time
+      • Calculate OEE and Actual values`,
       image: "/images/work-ex/dashboard/dash01.png",
       tools: [
         '/images/tools/node.png',
+        '/images/tools/react.png',
         '/images/tools/mariadb.png',
         '/images/tools/ws.png',
       ],

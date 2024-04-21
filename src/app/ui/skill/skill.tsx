@@ -30,6 +30,7 @@ const skills:Record<string,string[]> = {
     'Arduino / esp',
     'Ubuntu / ros',
     'Raspberry pi',
+    'MQTT',
   ],
   'CMS':[
     'PayloadCMS'

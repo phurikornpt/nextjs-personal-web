@@ -8,6 +8,7 @@ export type CardExProps = {
     date:string,
     title: string,
     description: string,
+    descriptionPreLine?: string,
     image?: string,
     tools: string[],
   }[],
@@ -84,7 +85,8 @@ const CardEx = (props:CardExProps) => {
           <Typography variant='body1' sx={{
             color: '#2B3C2C',
             fontWeight: '700',
-            whiteSpace: 'pre',
+            // maxWidth: '70%',
+            // whiteSpace: 'pre',
           }} className={`${paramThai.className}`}>
               {value.title}
           </Typography>
@@ -94,9 +96,17 @@ const CardEx = (props:CardExProps) => {
             fontWeight: '400',
             marginTop: '10px',
             fontSize: '0.8rem',
-            whiteSpace: 'pre',
+            // whiteSpace: 'pre',
           }} className={`${paramThai.className}`}>
               {value.description}
+          </Typography>
+          <Typography  sx={{
+            color: '#2B3C2C',
+            fontWeight: '400',
+            fontSize: '0.8rem',
+            whiteSpace: 'pre-line',
+          }} className={`${paramThai.className}`}>
+              {value.descriptionPreLine}
           </Typography>
           <Box  sx={{
             display:'flex',
