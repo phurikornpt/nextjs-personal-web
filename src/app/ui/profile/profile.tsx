@@ -163,7 +163,7 @@ const Profile = () => {
                     color: 'white',
                   }
                 }}>
-                  <Typography variant='body1' sx={{
+                  <Typography variant='body2' sx={{
                     fontWeight: '700',
                   }} className={`${fraunces.className}`}>
                     Download Resume
@@ -189,7 +189,7 @@ const Profile = () => {
                     offset={offsetScroll} 
                     duration={durationScroll}
                   >
-                    <Typography variant='body1' sx={{
+                    <Typography variant='body2' sx={{
                       fontWeight: '700',
                     }} className={`${fraunces.className}`}>
                       Contract Me

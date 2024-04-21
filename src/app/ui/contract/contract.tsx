@@ -129,6 +129,7 @@ const Contract = () => {
       <Box sx={{
         display: { xs: 'flex', md: 'none'},
         // justifyContent: 'start',
+        padding: '0px 40px 40px 40px',
         flexDirection: 'column',
         alignItems: 'start',
         background:'#2B3C2C',
@@ -137,7 +138,7 @@ const Contract = () => {
         <Box sx={{
           marginTop: '50px',
           marginBottom: '30px',
-          marginLeft: '40px',
+          
         }}>
           <Typography variant='h4' sx={{
               color: '#fff',
@@ -148,7 +149,7 @@ const Contract = () => {
         </Box>
 
         <Box sx={{
-          margin: '20px 0px 50px 100px',
+          // margin: '20px 0px 50px 100px',
           display: 'flex',
           flexDirection: 'column',
           gap: '20px',
