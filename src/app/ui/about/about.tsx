@@ -1,16 +1,12 @@
 
-import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
-import { fraunces, param, paramThai } from '../fonts'
+import { Box, Typography } from '@mui/material'
 import Image from 'next/image'
+import { fraunces, paramThai } from '../fonts'
 const content = [
   {
     title: 'About me',
     content: `My name is Phurikorn Thongyoi and my nicknamed is Phu. 
-    I am currently studying in the fourth year of the 
-    Bachelor of Engineering Technology in Electronics Engineering program 
-    at the Faculty of Industrial Technology, King Mongkut's University of Technology North Bangkok.
-    I will be graduating this year.`
+    I graduated from KMUTNB with a Bachelor of Engineering Program in Electronics Engineering Technology (Computer).`
   },
   {
     title: 'During my studies',
