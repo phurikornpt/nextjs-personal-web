@@ -3,7 +3,7 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import { Link } from 'react-scroll'
 import { fraunces, paramThai } from '../fonts'
 
-const profileContent = `Hi, I'm Phu. I'm a fourth-year student will graduate this year. This webpage will be my profile.
+const profileContent = `Hi, I'm Phu. I created this webpage in April 2024 so I think my webpage theme nature will make you feel comfortable from the High temperatures these days in Thailand.
 `
 const Profile = () => {
   const {
@@ -51,6 +51,8 @@ const Profile = () => {
                   fontWeight: '500',
                   marginTop: '20px',
                   maxWidth:'80%',
+                  whiteSpace:'pre-line',
+                  textAlign:'center'
                 }} className={`${paramThai.className}`}>
                   {profileContent}
               </Typography>
