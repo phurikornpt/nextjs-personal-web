@@ -1,25 +1,35 @@
 'use client'
-import { Box, Button, Grid, Typography } from '@mui/material'
-import React, { useRef, useState } from 'react'
-import { fraunces, param, paramThai } from '../fonts'
-import Image from 'next/image'
+import { Box, Typography } from '@mui/material'
+import { useRef, useState } from 'react'
+import { fraunces } from '../fonts'
 
-import Style from './style.module.css'
+import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft'
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight'
+import { IconButton } from '@mui/material'
 import CardEx, { CardExProps } from '../share/card-ex'
-import { IconButton } from '@mui/material';
-import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import Style from './style.module.css'
 
 const workEx:Pick<CardExProps,'cardEx'> = {
   cardEx:[
     {
+      date:"[ November 2023  - April 2024 ]",
+      title: "Backend Developer Internship at Codemonday",
+      description: ``,
+      descriptionPreLine:`• Responsible for developing REST APIs and designing databases.
+      • Developing a CMS (Content Management System) for managing content data.
+      • Developing email templates for mail-sending systems.
+      • Collaborating with front-end designers, QA (Quality Assurance), and PM (Project Manager) in program development.
+      • Working within Agile and Scrum frameworks.
+      `,
+      image: "/images/work-ex/internship/in01.png",
+      tools: [],
+    },
+    {
       date:"[ January 2022 ] ",
-      title: "Develop a website for managing the Shabu Buffet restaurant.",
+      title: "Developed the management website for a hot pot restaurant.",
       description: `Develop a website and design a database for internal data management within the restaurant. example`,
-      descriptionPreLine:`• Daily inventory management
-      • Raw material system intake
-      • Employee management
-      • Sales report generation 
+      descriptionPreLine:`• Developed a website and designed a database for internal management of the store, implementing an MVC architecture.
+      • Developed employee management, user permissions management, product inventory management, sales reporting, and product sales.
       `,
       image: "/images/work-ex/shabu/s1.png",
       tools: ['/images/tools/node.png','/images/tools/ex.png','/images/tools/access.png'],
@@ -28,9 +38,8 @@ const workEx:Pick<CardExProps,'cardEx'> = {
       date:"[ May 2022 - January 2023 ] ",
       title: "Assisting with university research: Developing AMR Robot",
       description: `Develop a robot control website`,
-      descriptionPreLine:`• Create a map by manually controlling the mobile robot
-      • Create a movement plan, select the robot's position and path
-      • Automatically control the robot movement and display the robot's position in real time
+      descriptionPreLine:`• Developed a website to control robot operations, including creating maps, generating movement plans, and displaying real-time robot positions.
+      • implementing an MVC architecture in developing the website and using WebSocket to data communicate between nodejs and python in the system.
       `,
       image: "/images/work-ex/robot/robot.png",
       tools: ['/images/tools/node.png','/images/tools/ros.png','/images/tools/ex.png','/images/tools/ws.png'],
@@ -39,23 +48,11 @@ const workEx:Pick<CardExProps,'cardEx'> = {
       date:"[ September 2023 ] ",
       title: "Assisting with university research: Rice donates machine",
       description: `Develop a website and design a database for website dashboard to show user data`,
-      descriptionPreLine:`• Display user data for 5 machine
-      • Show machine usage time
-      • Display for weekly, monthly or yearly data`,
+      descriptionPreLine:`• Develop a website and design a database for a dashboard that displays user usage data of the Rice donates machine.
+      • implementing an MVC architecture in developing the website and presenting data as graphs, segmented by week, month, and year
+      `,
       image: "/images/work-ex/sarana/s1.png",
       tools: ['/images/tools/php.png','/images/tools/mysql.png','/images/tools/hostinger.png'],
-    },
-    {
-      date:"[ November 2023  - April 2024 ]",
-      title: "Backend Developer Internship at Codemonday",
-      description: ``,
-      descriptionPreLine:`• Responsible for developing APIs and designing the database schema for assigned modules.
-      • Develop a CMS system for content and data management for user accessibility.
-      • Design and develop email templates for the mail-sending system.
-      • Coordinate with frontend designers project manager and QA personnel in system development.
-      `,
-      image: "/images/work-ex/internship/in01.png",
-      tools: [],
     },
     {
       date:"[ April 2024 ]",
