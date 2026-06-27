@@ -62,26 +62,6 @@ const Profile = () => {
                 display: 'flex',
                 gap: '20px',
               }}>
-
-              <Button variant="outlined" href='/profile/phurikorn-resume.pdf' target='_blank' sx={{
-                background: 'white',
-                color: '#2B3C2C',
-                borderRadius: '0px',
-                borderColor: '#2B3C2C',
-                textTransform: 'none',
-                padding: '20px 25px',
-                '&:hover': {
-                  backgroundColor: '#2B3C2C',
-                  color: 'white',
-                }
-              }}>
-                <Typography variant='h6' sx={{
-                  fontWeight: '700',
-                }} className={`${fraunces.className}`}>
-                  Download Resume
-                </Typography>
-              </Button>
-
               <Button variant="contained" sx={{
                 background: '#2B3C2C',
                 color: 'white',
@@ -155,22 +135,6 @@ const Profile = () => {
                 gap: '20px',
               }}>
 
-                <Button variant="contained" href='/profile/phurikorn-resume.pdf' target='_blank'  sx={{
-                  background: 'white',
-                  color: '#2B3C2C',
-                  borderRadius: '0px',
-                  textTransform: 'none',
-                  '&:hover': {
-                    backgroundColor: '#2B3C2C',
-                    color: 'white',
-                  }
-                }}>
-                  <Typography variant='body2' sx={{
-                    fontWeight: '700',
-                  }} className={`${fraunces.className}`}>
-                    Download Resume
-                  </Typography>
-                </Button>
 
                 <Button variant="contained" sx={{
                   background: '#2B3C2C',

@@ -81,45 +81,6 @@ const Contract = () => {
               </Typography>
             </Link>
           </Box>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            color: '#fff',
-          }}>
-            <GitHubIcon/>
-            <Link href="https://github.com/phurkornt" target='_blank' className={`${param.className}`} style={{
-              color: '#fff',
-              // fontWeight: '400',
-              textDecoration: 'none',
-            }}>
-              <Typography variant='h6'>
-                second git : phurkornt
-              </Typography>
-            </Link>
-          </Box>
-          <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '10px',
-            color: '#fff',
-          }}>
-            <Image
-              src='/images/contract/line-logo.png' 
-              width={24} 
-              height={24}
-              style={{
-                color: '#fff',
-                objectFit: 'contain',
-                filter: 'invert(1)'
-              }}
-              alt='profile'
-            >
-            </Image>
-            <Typography variant='h6'>
-              phurikorn
-            </Typography>
-          </Box>
     
         </Box>
 

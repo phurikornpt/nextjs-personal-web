@@ -72,10 +72,9 @@ const CardEx = (props:CardExProps) => {
                 height={size.height}
                 alt="Picture of the author"
                 style={{
-                  margin: '10px 0px',
-                  // objectFit: 'fill',
+                  margin: '0px 0px',
+                  objectFit: 'contain',
                 }}
-                
               />
               : <></>
             }
